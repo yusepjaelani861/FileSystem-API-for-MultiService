@@ -5,6 +5,20 @@
 Documentation from Postman [click here](https://documenter.getpostman.com/view/19496704/Uz5Nisvt#24328f7f-9b6d-4821-bc1e-56dc5d57dff8)
  
  
+## Installation
+
+Setup file .env or rename **.env.example** to **.env**. 
+
+Fill DB_DATABASE, DB_USERNAME and DB_PASSWORD.
+
+Fill FTP_HOST, FTP_USERNAME, FTP_PASSWORD, FTP_URL.
+
+if you have done the above, then just follow the steps below on command prompt.
+```bash
+  php artisan migrate:fresh
+  php artisan serve
+```
+    
 
 ## API Reference
 
