@@ -32,10 +32,10 @@ class APIController extends Controller
     public function search(Request $request)
     {
         $validator = $request->validate([
-            'search' => 'required|string',
+            'q' => 'required|string',
         ]);
 
-        $files = Files::where('name', 'like', '%'.$request->search.'%')->get();
+        $files = Files::where('name', 'like', '%'.$request->q.'%')->get();
 
         # Keterangan
         # $request->search = isi yang mau dicari dengan pencarian filter pada nama file
