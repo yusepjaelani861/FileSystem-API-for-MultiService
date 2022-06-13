@@ -32,6 +32,7 @@ if you have done the above, then just follow the steps below on command prompt.
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `app_id` | `integer` | **Required**. APP ID from services |
+| `file` | `file` | **Required**. File to upload, allows uploading more than 1 file at a time |
 
 ## List Files
 
