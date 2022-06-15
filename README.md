@@ -2,7 +2,7 @@
 
 ## Documentation
 
-Documentation from Postman [click here](https://documenter.getpostman.com/view/19496704/Uz5Nisvt)
+Documentation from Postman [click here](https://documenter.getpostman.com/view/19496704/UzBgvq4B)
  
  
 ## Installation
