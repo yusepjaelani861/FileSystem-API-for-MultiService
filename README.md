@@ -22,6 +22,20 @@ if you have done the above, then just follow the steps below on command prompt.
 
 ## API Reference
 
+
+## Create Token
+
+```http
+  POST {{base_url}}/api/create-token
+```
+
+#### Body "Form Data"
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name` | `string` | **Required**. Name App |
+| `domain` | `string` | **Required**. Domain url, not using http:// or https:// |
+
+
 ## Upload Files
 
 ```http
@@ -31,7 +45,8 @@ if you have done the above, then just follow the steps below on command prompt.
 #### Body "Form Data"
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `app_id` | `integer` | **Required**. APP ID from services |
+| `token` | `string` | **Required**. Token from App services register |
+| `file` | `file` | **Required**. File upload |
 
 ## List Files
 
@@ -41,7 +56,7 @@ if you have done the above, then just follow the steps below on command prompt.
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `app_id`      | `integer` | **Required**. APP ID to fetch |
+| `token` | `string` | **Required**. Token from App services register |
 | `p`      | `integer` | **Optional**. total data per page for pagination |
 
 
@@ -54,6 +69,7 @@ if you have done the above, then just follow the steps below on command prompt.
 #### Body "Form Data"
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
+| `token` | `string` | **Required**. Token from App services register |
 | `file_id` | `string` | **Required**. File_id to rename file |
 | `name` | `string` | **Required**. New name file to rename |
 
@@ -67,6 +83,7 @@ if you have done the above, then just follow the steps below on command prompt.
 #### Body "Form Data"
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
+| `token` | `string` | **Required**. Token from App services register |
 | `file_id` | `string` | **Required**. File_id to delete file |
 
 
@@ -78,6 +95,7 @@ if you have done the above, then just follow the steps below on command prompt.
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
+| `token` | `string` | **Required**. Token from App services register |
 | `q` | `string` | **Required**. Name file to search file in database |
 
 
@@ -89,6 +107,7 @@ if you have done the above, then just follow the steps below on command prompt.
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
+| `token` | `string` | **Required**. Token from App services register |
 | `f` | `string` | **Required**. filter name. example: extension, mime_type, disk, etc. |
 | `search` | `string` | **Required**. Search name filter, example: if (f=extension) {search=mp4}, etc. |
 
