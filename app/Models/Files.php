@@ -20,9 +20,4 @@ class Files extends Model
         'disk',
         'url',
     ];
-    
-    public function resize()
-    {
-        return $this->hasMany(Resize::class);
-    }
 }

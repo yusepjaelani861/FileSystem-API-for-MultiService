@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\APIController;
+use App\Http\Controllers\API\FilesController;
+use App\Http\Controllers\API\TokenController;
+use App\Http\Controllers\API\UploadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,17 +21,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
 # POST Method
-Route::post('/upload', [APIController::class, 'upload']);
-Route::post('/rename', [APIController::class, 'rename']);
-Route::post('/delete', [APIController::class, 'delete']);
+Route::post('/upload', [UploadController::class, 'upload']); // Upload File
+Route::post('/rename', [FilesController::class, 'rename']); // Rename File
+Route::post('/delete', [FilesController::class, 'delete']); //  Delete File
 
 
 # GET Method
-Route::get('/list', [APIController::class, 'list']);
-Route::get('/search', [APIController::class, 'search']);
-Route::get('/filter', [APIController::class, 'filter']);
-Route::get('/download/{file_id}', [APIController::class, 'download']);
+Route::get('/list', [FilesController::class, 'list']); //   List File
+Route::get('/search', [FilesController::class, 'search']); //   Search File
+Route::get('/filter', [FilesController::class, 'filter']); //   Filter File
 
-
-Route::get('/image/{file_id}', [APIController::class, 'getImage']);
+# Create Token
+Route::post('/create-token', [TokenController::class, 'create']); //   Create Token

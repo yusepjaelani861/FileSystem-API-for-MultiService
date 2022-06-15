@@ -10,6 +10,7 @@ class Resize extends Model
     use HasFactory;
 
     protected $fillable = [
+        'app_id',
         'file_id',
         'name',
         'path',
@@ -18,12 +19,5 @@ class Resize extends Model
         'size',
         'disk',
         'url',
-        'width',
-        'height',
     ];
-
-    public function file()
-    {
-        return $this->belongsTo(File::class);
-    }
 }
